@@ -6,7 +6,7 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:45:36 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/22 13:31:55 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/06/25 20:35:41 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 
 Contact::Contact(void)
 {
-    // FirstName = "";
-    // LastName = "";
-    // NickName = "";
-    // PhoneNumber = "";
-    // DarkestSecret = "";
     return ;
 }
 
@@ -53,6 +48,11 @@ void Contact::SetDarkestSecret(std::string str)
     DarkestSecret = str;
 }
 
+void Contact::SetValid(bool isValid)
+{
+    valid = isValid;
+}
+
 std::string Contact::GetFirstName(void)
 {
     return (FirstName);
@@ -76,5 +76,10 @@ std::string Contact::GetPhoneNumber(void)
 std::string Contact::GetDarkestSecret(void)
 {
     return (DarkestSecret);
+}
+
+bool Contact::GetValid(void)
+{
+    return (valid);
 }
 

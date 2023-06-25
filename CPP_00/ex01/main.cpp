@@ -6,13 +6,12 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:09:21 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/22 14:09:55 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/06/25 22:04:42 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string.h>
-#include <stdio.h>
+#include <string>
 #include "PhoneBook.hpp"
 
 int main()
@@ -22,35 +21,33 @@ int main()
     PhoneBook       phone;
 
     contacts = 0;
+    phone.last = 0;
     std::cout<<"SELECT OPERATION:\nADD: Save new contact\nSEARCH: display a specific contact\nEXIT: Quit"<<std::endl<<std::endl;
     while (1)
     {
-        std::cout<<"ENTER OPERATION >> ";
+        std::cout<<"\nENTER OPERATION >> ";
         getline(std::cin, operation);
         if (!operation.compare("EXIT"))
             break ;
         else if (!operation.compare("ADD"))
         {
-            if (contacts<8)
+            if (phone.length() < 8)
             {
                 phone.add(contacts);
                 contacts++;
             }
             else if (contacts >= 8)
-            {
-                contacts = 7;
                 phone.resetlast();
-                phone.add(contacts);
-            }
         }
+        else if (!operation.compare("SEARCH"))
+        {
+            phone.print();
+            std::cout<<"\nINSERT INDEX >> ";
+            getline(std::cin, operation);
+            phone.print(operation[0] - '0' - 1);
+        }
+        else
+            std::cout<<"Invalid command."<<std::endl<<std::endl;
     }
-
-    contacts = 0;
-    while (contacts < 8)
-    {
-        std::cout<<phone.contacts[contacts].GetFirstName()<<std::endl;
-        contacts++;
-    }
-    std::cout<<"PHONEBOOK DESTROYED"<<std::endl; 
     return 0;
 }
