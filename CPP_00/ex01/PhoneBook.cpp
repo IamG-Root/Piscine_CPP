@@ -6,7 +6,7 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:07:19 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/25 22:01:57 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/06/28 09:59:26 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 
 PhoneBook::PhoneBook(void)
 {
+    int i;
+
+    i = 0;
+    while (i < 8)
+        this->contacts[i++].SetValid(false);
     return ;
 }
 

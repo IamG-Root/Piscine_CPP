@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/25 18:57:32 by scastagn          #+#    #+#              #
-#    Updated: 2023/06/28 09:52:05 by scastagn         ###   ########.fr        #
+#    Created: 2023/06/28 10:45:59 by scastagn          #+#    #+#              #
+#    Updated: 2023/06/28 10:46:32 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= PhoneBook
+NAME		= the_job_of_your_dreams
 
 CC			= c++
 
@@ -29,8 +29,6 @@ $(NAME):
 
 all:		$(NAME)
 
-val:		$(NAME)
-	valgrind --leak-check=full ./$(NAME)
 clean:		
 	@$(RM) $(NAME)
 	@echo "[-] $(NAME) cleaned"

@@ -6,13 +6,13 @@
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/22 10:36:28 by scastagn          #+#    #+#              #
-#    Updated: 2023/06/22 10:48:34 by scastagn         ###   ########.fr        #
+#    Updated: 2023/06/28 09:43:05 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= megaphone
 
-CC			= g++
+CC			= c++
 
 CFLAGS		= -std=c++98 -Wall -Wextra -Werror
 

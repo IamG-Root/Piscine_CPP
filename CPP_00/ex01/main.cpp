@@ -6,7 +6,7 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:09:21 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/25 22:04:42 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/06/28 09:46:09 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,11 @@ int main()
         }
         else if (!operation.compare("SEARCH"))
         {
+            if (phone.length() < 1)
+            {
+                std::cout<<"Phonebook is empty!"<<std::endl;
+                continue ;
+            }
             phone.print();
             std::cout<<"\nINSERT INDEX >> ";
             getline(std::cin, operation);
