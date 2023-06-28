@@ -6,12 +6,13 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:09:21 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/28 09:46:09 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/06/28 12:57:36 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include <csignal>
 #include "PhoneBook.hpp"
 
 int main()
@@ -22,10 +23,10 @@ int main()
 
     contacts = 0;
     phone.last = 0;
-    std::cout<<"SELECT OPERATION:\nADD: Save new contact\nSEARCH: display a specific contact\nEXIT: Quit"<<std::endl<<std::endl;
+    std::cout<<OPTIONS_MACRO<<std::endl<<std::endl;
     while (1)
     {
-        std::cout<<"\nENTER OPERATION >> ";
+        std::cout<<ENTER;
         getline(std::cin, operation);
         if (!operation.compare("EXIT"))
             break ;
@@ -43,16 +44,18 @@ int main()
         {
             if (phone.length() < 1)
             {
-                std::cout<<"Phonebook is empty!"<<std::endl;
+                std::cout<<EMPTY<<std::endl;
                 continue ;
             }
             phone.print();
-            std::cout<<"\nINSERT INDEX >> ";
+            std::cout<<INDEX;
             getline(std::cin, operation);
-            phone.print(operation[0] - '0' - 1);
+            phone.print(operation);
         }
         else
-            std::cout<<"Invalid command."<<std::endl<<std::endl;
+            std::cout<<BAD<<std::endl<<std::endl;
+        if (std::cin.eof())
+            return (0);
     }
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:07:19 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/28 09:59:26 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/06/28 13:06:18 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,31 @@ PhoneBook::~PhoneBook(void)
 
 void PhoneBook::add(int index)
 {
-    std::string value;
+    std::string value = "";
 
-    std::cout<<"\nINSERT FIRST NAME >> ";
-    getline(std::cin, value);
+    std::cout<<INS_F_NAME;
+    while(!value.length())
+        getline(std::cin, value);
     this->contacts[index].SetFirstName(value);
-    std::cout<<"\nINSERT LAST NAME >> ";
-    getline(std::cin, value);
+    std::cout<<INS_L_NAME;
+    value.clear();
+    while(!value.length())
+        getline(std::cin, value);
     this->contacts[index].SetLastName(value);
-    std::cout<<"\nINSERT NICK NAME >> ";
-    getline(std::cin, value);
+    value.clear();
+    std::cout<<INS_N_NAME;
+    while(!value.length())
+        getline(std::cin, value);
     this->contacts[index].SetNickName(value);
-    std::cout<<"\nINSERT PHONE NUMBER >> ";
-    getline(std::cin, value);
+    value.clear();
+    std::cout<<INS_PHONE;
+    while(!value.length())
+        getline(std::cin, value);
     this->contacts[index].SetPhoneNumber(value);
-    std::cout<<"\nINSERT DARKEST SECRET >> ";
-    getline(std::cin, value);
+    value.clear();
+    std::cout<<INS_SECRET;
+    while(!value.length())
+        getline(std::cin, value);
     this->contacts[index].SetDarkestSecret(value);
     this->contacts[index].SetValid(true);
 }
@@ -100,19 +109,22 @@ void PhoneBook::print()
     }
 }
 
-void PhoneBook::print(int index)
+void PhoneBook::print(std::string operation)
 {
-    if (index >= this->length() || index < 0)
+    int index;
+
+    index = operation[0] - '0' - 1;
+    if (index >= this->length() || index < 0 || operation.length() > 1)
     {
-        std::cout<<"Invalid index!"<<std::endl;
+        std::cout<<INV_INDEX<<std::endl;
         return ;
     }
     std::cout<<std::endl;
-    std::cout<<"First name: "<<this->contacts[index].GetFirstName()<<std::endl;
-    std::cout<<"Last name: "<<this->contacts[index].GetLastName()<<std::endl;
-    std::cout<<"Nickname: "<<this->contacts[index].GetNickName()<<std::endl;
-    std::cout<<"Phone number: "<<this->contacts[index].GetPhoneNumber()<<std::endl;
-    std::cout<<"Darkest secret: "<<this->contacts[index].GetDarkestSecret()<<std::endl;
+    std::cout<<F_NAME<<this->contacts[index].GetFirstName()<<std::endl;
+    std::cout<<L_NAME<<this->contacts[index].GetLastName()<<std::endl;
+    std::cout<<N_NAME<<this->contacts[index].GetNickName()<<std::endl;
+    std::cout<<PHONE_NBR<<this->contacts[index].GetPhoneNumber()<<std::endl;
+    std::cout<<SECRET<<this->contacts[index].GetDarkestSecret()<<std::endl;
     return ;
 }
 
