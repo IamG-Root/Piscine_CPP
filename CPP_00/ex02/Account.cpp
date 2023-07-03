@@ -6,7 +6,7 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 22:17:14 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/28 11:10:38 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:32:51 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	Account::makeDeposit( int deposit )
     std::cout<<";p_amount:"<<_amount;
     std::cout<<";deposit:"<<deposit;
     _amount += deposit;
+    _totalAmount += deposit;
     std::cout<<";amount:"<<_amount;
     _nbDeposits++;
     std::cout<<";nb_deposits:"<<_nbDeposits<<std::endl;
@@ -70,6 +71,8 @@ bool	Account::makeWithdrawal( int withdrawal )
     if (_amount >= withdrawal)
     {
         std::cout<<";withdrawal:"<<withdrawal;
+        _amount -= withdrawal;
+        _totalAmount -= withdrawal;
         std::cout<<";amount:"<<_amount;
         _nbWithdrawals++;
         std::cout<<";nb_withdrawals:"<<_nbWithdrawals<<std::endl;
@@ -95,5 +98,10 @@ Account::Account(int initial_deposit)
 
 Account::~Account(void)
 {
+    _displayTimestamp();
+    std::cout<<"index:"<<_accountIndex;
+    std::cout<<";amount:"<<_amount;
+    std::cout<<";closed"<<std::endl;
+    return ;
     return ;
 }

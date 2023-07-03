@@ -6,7 +6,7 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:09:21 by scastagn          #+#    #+#             */
-/*   Updated: 2023/06/28 12:57:36 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:38:17 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,10 @@ int main()
             getline(std::cin, operation);
             phone.print(operation);
         }
+        else if (std::cin.eof())
+            return (1);
         else
             std::cout<<BAD<<std::endl<<std::endl;
-        if (std::cin.eof())
-            return (0);
     }
     return 0;
 }
