@@ -6,7 +6,7 @@
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 22:18:36 by scastagn          #+#    #+#              #
-#    Updated: 2023/07/03 22:38:24 by scastagn         ###   ########.fr        #
+#    Updated: 2023/07/04 21:53:57 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		= BraiiiiiiinnnzzzZ
 
 CC			= c++
 
-CFLAGS		= -std=c++98 -Wall -Wextra -Werror -fcommon -fsanitize=address
+CFLAGS		= -std=c++98 -Wall -Wextra -Werror
 
 SRC_DIR		= .
 

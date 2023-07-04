@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/03 22:18:36 by scastagn          #+#    #+#              #
-#    Updated: 2023/07/04 21:53:47 by scastagn         ###   ########.fr        #
+#    Created: 2023/07/04 21:58:01 by scastagn          #+#    #+#              #
+#    Updated: 2023/07/04 22:55:50 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ZombieHorde
+NAME		= UnnecessaryViolence
 
 CC			= c++
 
-CFLAGS		= -std=c++98 -Wall -Wextra -Werror
+CFLAGS		= -std=c++98 -Wall -Wextra -Werror -fcommon -fsanitize=address
 
 SRC_DIR		= .
 

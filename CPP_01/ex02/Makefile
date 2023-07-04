@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/03 22:18:36 by scastagn          #+#    #+#              #
-#    Updated: 2023/07/04 21:53:47 by scastagn         ###   ########.fr        #
+#    Created: 2023/07/04 21:29:42 by scastagn          #+#    #+#              #
+#    Updated: 2023/07/04 21:53:41 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ZombieHorde
+NAME		= HiThisIsBrain
 
 CC			= c++
 
