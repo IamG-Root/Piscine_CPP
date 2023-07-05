@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 21:49:42 by scastagn          #+#    #+#             */
-/*   Updated: 2023/07/04 23:01:21 by scastagn         ###   ########.fr       */
+/*   Created: 2023/07/05 21:59:03 by scastagn          #+#    #+#             */
+/*   Updated: 2023/07/05 22:31:53 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_H
-#define WEAPON_H
+#include "Harl.hpp"
 
-#include <iostream>
-#include <string>
-
-class Weapon
+int main()
 {
-    public:
-        Weapon();
-        Weapon(std::string str);
-        ~Weapon();
-        std::string& getType();
-        void    setType(std::string str);
-    private:
-        std::string type;
-};
+    Harl obj;
 
-#endif
+    obj.complain("DEBUG");
+    obj.complain("INFO");
+    obj.complain("WARNING");
+    obj.complain("ERROR");
+    
+    return 0;
+}
