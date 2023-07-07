@@ -6,11 +6,11 @@
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/06 15:55:19 by scastagn          #+#    #+#              #
-#    Updated: 2023/07/06 22:26:22 by scastagn         ###   ########.fr        #
+#    Updated: 2023/07/07 22:36:19 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= IsInTriangle
+NAME		= Bsp
 
 CC			= c++
 

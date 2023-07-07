@@ -6,84 +6,28 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:54:06 by scastagn          #+#    #+#             */
-/*   Updated: 2023/07/06 22:15:29 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/07/07 22:35:48 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
+
+bool bsp( Point const a, Point const b, Point const c, Point const point);
 
 int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-
-    std::cout << Fixed::max( a, b ) << std::endl;
+    std::cout<<"0 = external | 1 = internal"<<std::endl<<std::endl;
     
+    std::cout<<"a(1,1) -- b(4,2) -- c(2,5) -- point(1,3)"<<std::endl;
+    std::cout<<bsp(Point(1, 1), Point(4,2), Point(2,5), Point(1, 3))<<std::endl<<std::endl;
+    
+    std::cout<<"a(1,1) -- b(4,2) -- c(2,5) -- point(3,2)"<<std::endl;
+    std::cout<<bsp(Point(1, 1), Point(4,2), Point(2,5), Point(3, 2))<<std::endl<<std::endl;
+    
+    std::cout<<"a(0,0) -- b(5,0) -- c(3,10) -- point(1,3)"<<std::endl;
+    std::cout<<bsp(Point(0,0), Point(5,0), Point(3,10), Point(1, 3))<<std::endl<<std::endl;
+    
+    std::cout<<"a(0,0) -- b(5,0) -- c(3,10) -- point(4,6)"<<std::endl;
+    std::cout<<bsp(Point(0,0), Point(5,0), Point(3,10), Point(4,6))<<std::endl<<std::endl;
     return 0;
 }
-// int main( void ) {
-//     Fixed a;
-//     Fixed const b( 10 );
-//     Fixed const c( 42.42f );
-//     Fixed const d( b );
-
-//     a = Fixed( 1234.4321f );
-
-//     std::cout << "a is " << a << std::endl;
-//     std::cout << "b is " << b << std::endl;
-//     std::cout << "c is " << c << std::endl;
-//     std::cout << "d is " << d << std::endl;
-    
-//     std::cout<<(a > b)<<std::endl;
-//     std::cout<<(b > a)<<std::endl;
-
-//     std::cout<<(a < b)<<std::endl;
-//     std::cout<<(b < a)<<std::endl;
-
-//     std::cout<<(b >= d)<<std::endl;
-//     std::cout<<(b >= a)<<std::endl;
-
-//     std::cout<<(a <= b)<<std::endl;
-//     std::cout<<(b <= d)<<std::endl;
-
-//     std::cout<<(a == b)<<std::endl;
-//     std::cout<<(b == d)<<std::endl;
-
-//     std::cout<<(a != b)<<std::endl;
-//     std::cout<<(b != d)<<std::endl;
-
-//     std::cout<<(Fixed(5.05f) * Fixed(2))<<std::endl;
-//     std::cout<<(Fixed(5.05f) / Fixed(2))<<std::endl;
-//     std::cout<<(Fixed(5.05f) + Fixed(2))<<std::endl;
-//     std::cout<<(Fixed(5.05f) - Fixed(2))<<std::endl;
-
-//     Fixed z;
-//     std::cout<<++z<<std::endl;
-//     std::cout<<z<<std::endl;
-//     std::cout<<z++<<std::endl;
-//     std::cout<<z<<std::endl;
-
-//     std::cout<<--z<<std::endl;
-//     std::cout<<z<<std::endl;
-//     std::cout<<z--<<std::endl;
-//     std::cout<<z<<std::endl;
-
-//     std::cout<<Fixed::min(a, z)<<std::endl;
-//     std::cout<<Fixed::max(a, z)<<std::endl;
-
-//     std::cout<<Fixed::min(a, b)<<std::endl;
-//     std::cout<<Fixed::max(a, b)<<std::endl;
-    
-//     std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-//     std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-//     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-//     std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-    
-//     return 0;
-// }
