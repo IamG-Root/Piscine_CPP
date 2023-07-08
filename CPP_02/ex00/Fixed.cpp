@@ -6,7 +6,7 @@
 /*   By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:48:11 by scastagn          #+#    #+#             */
-/*   Updated: 2023/07/06 18:39:45 by scastagn         ###   ########.fr       */
+/*   Updated: 2023/07/08 15:56:03 by scastagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ Fixed::Fixed( void )
 Fixed::Fixed( Fixed const & fixed )
 {
     // If you put this instead of the line below it calls the copy operator function, so you'll visualize the proper message Copy assignment...
-    //*this = fixed;
-    this->_value = fixed._value;
     std::cout<<"Copy constructor called"<<std::endl;
+    *this = fixed;
+    //this->_value = fixed._value;
 }
 
 Fixed::~Fixed( void )

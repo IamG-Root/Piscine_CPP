@@ -6,7 +6,7 @@
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/04 21:58:01 by scastagn          #+#    #+#              #
-#    Updated: 2023/07/04 22:55:50 by scastagn         ###   ########.fr        #
+#    Updated: 2023/07/08 10:14:54 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		= UnnecessaryViolence
 
 CC			= c++
 
-CFLAGS		= -std=c++98 -Wall -Wextra -Werror -fcommon -fsanitize=address
+CFLAGS		= -std=c++98 -Wall -Wextra -Werror #-fcommon -fsanitize=address
 
 SRC_DIR		= .
 
