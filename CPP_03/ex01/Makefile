@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: scastagn <scastagn@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/16 19:01:43 by scastagn          #+#    #+#              #
-#    Updated: 2023/07/16 19:02:01 by scastagn         ###   ########.fr        #
+#    Created: 2023/07/16 18:41:52 by scastagn          #+#    #+#              #
+#    Updated: 2023/07/22 18:40:21 by scastagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= test
+NAME		= ScavTrap
 
 CC			= c++
 
